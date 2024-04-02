@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 
 api = Flask(__name__)
 
+api.config["JWT_SECRET_KEY"] = "secret"
 
 @api.route('/', methods=['GET'])
 def get_root():
